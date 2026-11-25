@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Planejamento Dezembro | Branding Connect</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--tx:#14213d;--mut:#5c667a;--bd:#e3e6ee;--ac:#0b6e99;--nat:#c0392b;--car:#8e44ad;--org:#1e8e5a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10141f;--card:#1a2030;--tx:#eef1f8;--mut:#9aa4ba;--bd:#2a3248;--ac:#4cc0ec;--nat:#ff7b6b;--car:#c993ff;--org:#4fd69b}}
+:root[data-theme="dark"]{--bg:#10141f;--card:#1a2030;--tx:#eef1f8;--mut:#9aa4ba;--bd:#2a3248;--ac:#4cc0ec;--nat:#ff7b6b;--car:#c993ff;--org:#4fd69b}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.45}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--bd);padding:8px 16px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.top .hint{color:var(--mut);font-size:.78rem;flex:1;min-width:140px}
+.top button{border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:6px 12px;border-radius:99px;cursor:pointer;font-size:.82rem}
+body.edit #edit{background:var(--ac);color:#fff;border-color:var(--ac)}
+.w{max-width:1000px;margin:0 auto;padding:20px 16px 48px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:flex-end;margin-bottom:18px}
+h1{font-size:1.5rem;margin:0}
+.sub{color:var(--mut);font-size:.9rem}
+.tag{font-size:.75rem;padding:3px 10px;border-radius:99px;border:1px solid var(--bd);background:var(--card);color:var(--mut)}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:10px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px 16px}
+.card h3{margin:0 0 4px;font-size:.8rem;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.big{font-size:1.15rem;font-weight:700;color:var(--k,var(--tx))}
+[data-col=n]{--k:var(--nat)}[data-col=c]{--k:var(--car)}[data-col=o]{--k:var(--org)}
+h2{font-size:1.1rem;margin:26px 0 10px}
+.bar{display:flex;border-radius:10px;overflow:hidden;font-size:.78rem;color:#fff;font-weight:600}
+.seg{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6px;min-height:36px;gap:3px;background:var(--k,var(--ac))}
+.lg{display:flex;justify-content:space-between;font-size:.75rem;color:var(--mut);margin-top:4px;gap:8px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;align-items:center}
+.tab{border:1px solid var(--bd);background:var(--card);padding:7px 14px;border-radius:99px;cursor:pointer;font-size:.85rem}
+.tab.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.pane{display:none}.pane.on{display:block}
+.wk{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.wk .card ul,.card ul{margin:6px 0 0;padding-left:18px;font-size:.88rem}
+.pill{display:inline-block;font-size:.7rem;padding:2px 8px;border-radius:99px;color:#fff;margin:0 6px 6px 0;background:var(--k,var(--mut))}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:520px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--bd);vertical-align:top}
+th{color:var(--mut);font-size:.75rem;text-transform:uppercase}
+ul.chk,ul.chk li{list-style:none;padding-left:0}
+ul.chk li{margin:6px 0}
+ul.chk input{margin-right:8px}
+.two{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+footer{margin-top:30px;color:var(--mut);font-size:.8rem;text-align:center}
+.ctl{display:none}
+body.edit .ctl{display:inline-flex;gap:4px;flex-wrap:wrap;margin-top:6px}
+body.edit td.ctl,body.edit th.ctl{display:table-cell}
+.ctl button,.cb{border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:8px;font-size:.72rem;padding:2px 8px;cursor:pointer}
+li .cb{margin-left:6px}
+body.edit .ed{outline:1px dashed var(--ac);outline-offset:2px;cursor:text;min-width:1.5em}
+body.edit .ed:focus{outline:2px solid var(--ac);background:rgba(76,192,236,.12)}
+.ed{display:inline-block;min-width:1px}
+h1.ed,.sub.ed,p.ed,.big.ed,h3.ed{display:block}
+</style>
+</head>
+<body>
+<div class="top">
+  <button id="edit" type="button">✏️ Editar</button>
+  <button id="dl" type="button" hidden>⬇ Baixar index.html</button>
+  <span class="hint" id="hint">Clique em Editar para alterar qualquer texto, cor ou item.</span>
+  <button id="reset" type="button" class="ctl">Restaurar original</button>
+</div>
+<div class="w"><div id="app">
+<header>
+  <div>
+    <div class="sub ed">Branding Connect · Planejamento estratégico</div>
+    <h1 class="ed">Dezembro &amp; Janeiro · Consultoria de Viagens</h1>
+    <div class="sub"><span class="ed">Cliente: LPM Viagens —</span> <em class="ed">[nome do cliente a definir]</em></div>
+  </div>
+  <span class="tag ed">Dez/2026 → Jan/2027</span>
+</header>
+
+<div class="grid" id="kpis">
+  <div class="card"><h3 class="ed">Objetivo</h3><div class="big ed">Vender a consultoria de viagens</div><span class="ctl"><button data-a="col">Cor</button><button data-a="rm-kpi">Remover</button></span></div>
+  <div class="card" data-col="n"><h3 class="ed">Dez 1–15</h3><div class="big ed">Natal &amp; Ano Novo</div><span class="ctl"><button data-a="col">Cor</button><button data-a="rm-kpi">Remover</button></span></div>
+  <div class="card" data-col="c"><h3 class="ed">Dez 16–31</h3><div class="big ed">Virada p/ Carnaval</div><span class="ctl"><button data-a="col">Cor</button><button data-a="rm-kpi">Remover</button></span></div>
+  <div class="card" data-col="o"><h3 class="ed">Janeiro</h3><div class="big ed">Criativos orgânicos</div><span class="ctl"><button data-a="col">Cor</button><button data-a="rm-kpi">Remover</button></span></div>
+</div>
+<div class="ctl"><button data-a="add-kpi">+ Card de resumo</button></div>
+
+<h2 class="ed">Linha do tempo de foco</h2>
+<div class="bar" id="bar">
+  <div class="seg" data-col="n" style="flex:15"><span class="ed">Natal / Ano Novo</span><span class="ctl"><button data-a="seg-">−</button><button data-a="seg+">+</button><button data-a="col">Cor</button><button data-a="rm-seg">×</button></span></div>
+  <div class="seg" data-col="c" style="flex:16"><span class="ed">Carnaval</span><span class="ctl"><button data-a="seg-">−</button><button data-a="seg+">+</button><button data-a="col">Cor</button><button data-a="rm-seg">×</button></span></div>
+  <div class="seg" data-col="o" style="flex:31"><span class="ed">Gravação de criativos orgânicos (reuso em tráfego)</span><span class="ctl"><button data-a="seg-">−</button><button data-a="seg+">+</button><button data-a="col">Cor</button><button data-a="rm-seg">×</button></span></div>
+</div>
+<div class="ctl"><button data-a="add-seg">+ Etapa na linha do tempo</button></div>
+<div class="lg"><span class="ed">1 dez</span><span class="ed">15 dez</span><span class="ed">31 dez</span><span class="ed">31 jan</span></div>
+<p class="sub ed">Viagem exige antecedência: depois do dia 15 de dezembro, a comunicação de Natal/Ano Novo perde força e o foco passa para o Carnaval.</p>
+
+<h2 class="ed">Calendário de dezembro</h2>
+<div class="tabs" id="tabs">
+  <div class="tab on" data-p="p1"><span class="ed">Sem 1 · 1–7</span></div>
+  <div class="tab" data-p="p2"><span class="ed">Sem 2 · 8–15</span></div>
+  <div class="tab" data-p="p3"><span class="ed">Sem 3 · 16–22</span></div>
+  <div class="tab" data-p="p4"><span class="ed">Sem 4 · 23–31</span></div>
+  <span class="ctl" id="tabctl"><button data-a="add-week">+ Semana</button><button data-a="rm-week">Remover semana atual</button></span>
+</div>
+<div id="panes">
+<div class="pane on" id="p1"><div class="wk">
+  <div class="card"><span class="pill ed" data-col="n">Natal / Ano Novo</span><b class="ed">Feed</b><ul><li><span class="ed">Destinos para passar o Natal</span><button class="cb ctl" data-a="rm-li">×</button></li><li><span class="ed">Reveillon: onde ainda dá tempo</span><button class="cb ctl" data-a="rm-li">×</button></li><li><span class="ed">Carrossel: como funciona a consultoria</span><button class="cb ctl" data-a="rm-li">×</button></li></ul><div class="ctl"><button data-a="add-li">+ Item</button><button data-a="col-pill">Cor</button><button data-a="rm-card">Remover card</button></div></div>
+  <div class="card"><span class="pill ed" data-col="n">Natal / Ano Novo</span><b class="ed">Reels</b><ul><li><span class="ed">Roteiro rápido de 3 destinos de fim de ano</span><button class="cb ctl" data-a="rm-li">×</button></li><li><span class="ed">Bastidores de montar uma viagem</span><button class="cb ctl" data-a="rm-li">×</button></li></ul><div class="ctl"><button data-a="add-li">+ Item</button><button data-a="col-pill">Cor</button><button data-a="rm-card">Remover card</button></div></div>
+  <div class="card"><span class="pill ed" data-col="o">Stories</span><b class="ed">Diário + 10 dicas</b><ul><li><span class="ed">Enquete: Natal ou Réveillon?</span><button class="cb ctl" data-a="rm-li">×</button></li><li><span class="ed">Caixinha de perguntas</span><button class="cb ctl" data-a="rm-li">×</button></li><li><span class="ed">10 dicas de destino da semana</span><button class="cb ctl" data-a="rm-li">×</button></li></ul><div class="ctl"><button data-a="add-li">+ Item</button><button data-a="col-pill">Cor</button><button data-a="rm-card">Remover card</button></div></div>
+</div><div class="ctl"><button data-a="add-card">+ Card nesta semana</button></div></div>
+<div class="pane" id="p2"><div class="wk">
+  <div class="card"><span class="pill ed" data-col="n">Última chamada</span><b class="ed">Feed</b><ul><li><span class="ed">Últimas vagas / urgência Réveillon</span><button class="cb ctl" data-a="rm-li">×</button></li><li><span class="ed">Depoimento de cliente (prova social)</span><button class="cb ctl" data-a="rm-li">×</button></li></ul><div class="ctl"><button data-a="add-li">+ Item</button><button data-a="col-pill">Cor</button><button data-a="rm-card">Remover card</button></div></div>
+  <div class="card"><span class="pill ed" data-col="n">Última chamada</span><b class="ed">Reels</b><ul><li><span class="ed">Checklist: o que falta para viajar no fim de ano</span><button class="cb ctl" data-a="rm-li">×</button></li><li><span class="ed">Oferta de consultoria com prazo</span><button class="cb ctl" data-a="rm-li">×</button></li></ul><div class="ctl"><button data-a="add-li">+ Item</button><button data-a="col-pill">Cor</button><button data-a="rm-card">Remover card</button></div></div>
+  <div class="card"><span class="pill ed" data-col="o">Stories</span><b class="ed">Diário + 10 dicas</b><ul><li><span class="ed">Contagem regressiva do prazo</span><button class="cb ctl" data-a="rm-li">×</button></li><li><span class="ed">Respostas de dúvidas</span><button class="cb ctl" data-a="rm-li">×</button></li><li><span class="ed">10 dicas do que fazer em um destino</span><button class="cb ctl" data-a="rm-li">×</button></li></ul><div class="ctl"><button data-a="add-li">+ Item</button><button data-a="col-pill">Cor</button><button data-a="rm-card">Remover card</button></div></div>
+</div><div class="ctl"><button data-a="add-card">+ Card nesta semana</button></div></div>
+<div class="pane" id="p3"><div class="wk">
+  <div class="card"><span class="pill ed" data-col="c">Carnaval</span><b class="ed">Feed</b><ul><li><span class="ed">Anúncio: planeje seu Carnaval agora</span><button class="cb ctl" data-a="rm-li">×</button></li><li><span class="ed">Destinos de Carnaval + vantagens de reservar cedo</span><button class="cb ctl" data-a="rm-li">×</button></li></ul><div class="ctl"><button data-a="add-li">+ Item</button><button data-a="col-pill">Cor</button><button data-a="rm-card">Remover card</button></div></div>
+  <div class="card"><span class="pill ed" data-col="c">Carnaval</span><b class="ed">Reels</b><ul><li><span class="ed">Por que reservar o Carnaval antes</span><button class="cb ctl" data-a="rm-li">×</button></li><li><span class="ed">Mensagem de fim de ano + convite à consultoria</span><button class="cb ctl" data-a="rm-li">×</button></li></ul><div class="ctl"><button data-a="add-li">+ Item</button><button data-a="col-pill">Cor</button><button data-a="rm-card">Remover card</button></div></div>
+  <div class="card"><span class="pill ed" data-col="o">Stories</span><b class="ed">Diário + 10 dicas</b><ul><li><span class="ed">Enquete: bloco, praia ou serra?</span><button class="cb ctl" data-a="rm-li">×</button></li><li><span class="ed">10 dicas de destinos de Carnaval</span><button class="cb ctl" data-a="rm-li">×</button></li></ul><div class="ctl"><button data-a="add-li">+ Item</button><button data-a="col-pill">Cor</button><button data-a="rm-card">Remover card</button></div></div>
+</div><div class="ctl"><button data-a="add-card">+ Card nesta semana</button></div></div>
+<div class="pane" id="p4"><div class="wk">
+  <div class="card"><span class="pill ed" data-col="c">Carnaval</span><b class="ed">Feed</b><ul><li><span class="ed">Retrospectiva de viagens do ano</span><button class="cb ctl" data-a="rm-li">×</button></li><li><span class="ed">2027 começa com Carnaval planejado</span><button class="cb ctl" data-a="rm-li">×</button></li></ul><div class="ctl"><button data-a="add-li">+ Item</button><button data-a="col-pill">Cor</button><button data-a="rm-card">Remover card</button></div></div>
+  <div class="card"><span class="pill ed" data-col="c">Carnaval</span><b class="ed">Reels</b><ul><li><span class="ed">Roteiro Carnaval: quanto custa e como se organizar</span><button class="cb ctl" data-a="rm-li">×</button></li></ul><div class="ctl"><button data-a="add-li">+ Item</button><button data-a="col-pill">Cor</button><button data-a="rm-card">Remover card</button></div></div>
+  <div class="card"><span class="pill ed" data-col="o">Stories</span><b class="ed">Diário + 10 dicas</b><ul><li><span class="ed">Bastidores da virada</span><button class="cb ctl" data-a="rm-li">×</button></li><li><span class="ed">10 dicas semanais de destino</span><button class="cb ctl" data-a="rm-li">×</button></li><li><span class="ed">Chamada para a consultoria</span><button class="cb ctl" data-a="rm-li">×</button></li></ul><div class="ctl"><button data-a="add-li">+ Item</button><button data-a="col-pill">Cor</button><button data-a="rm-card">Remover card</button></div></div>
+</div><div class="ctl"><button data-a="add-card">+ Card nesta semana</button></div></div>
+</div>
+
+<h2 class="ed">Stories: rotina</h2>
+<div class="tw"><table id="tbl"><tbody>
+<tr><th class="ed">Frequência</th><th class="ed">Formato</th><th class="ed">Objetivo</th><th class="ctl"></th></tr>
+<tr><td class="ed">Diário</td><td class="ed">Enquete, caixinha, bastidores, depoimento</td><td class="ed">Manter o perfil ativo e abrir conversa</td><td class="ctl"><button class="cb" data-a="rm-row">×</button></td></tr>
+<tr><td class="ed">Semanal</td><td class="ed">Sequência de 10 dicas do que fazer no destino</td><td class="ed">Autoridade e movimento orgânico</td><td class="ctl"><button class="cb" data-a="rm-row">×</button></td></tr>
+</tbody></table></div>
+<div class="ctl"><button data-a="add-row">+ Linha</button></div>
+
+<h2 class="ed">Janeiro: foco em criativos orgânicos</h2>
+<div class="two">
+  <div class="card"><b class="ed">Gravações</b><ul class="chk" data-k="chk">
+    <li><input type="checkbox"><span class="ed">Depoimentos de clientes</span><button class="cb ctl" data-a="rm-li">×</button></li>
+    <li><input type="checkbox"><span class="ed">Bastidores da consultoria</span><button class="cb ctl" data-a="rm-li">×</button></li>
+    <li><input type="checkbox"><span class="ed">Dicas por destino (formato Reels)</span><button class="cb ctl" data-a="rm-li">×</button></li>
+    <li><input type="checkbox"><span class="ed">Apresentação da consultora</span><button class="cb ctl" data-a="rm-li">×</button></li>
+    <li><input type="checkbox"><span class="ed">Roteiros de Carnaval</span><button class="cb ctl" data-a="rm-li">×</button></li>
+  </ul><div class="ctl"><button data-a="add-li">+ Item</button></div></div>
+  <div class="card"><b class="ed">Pilares</b><ul data-k="pil">
+    <li><span class="ed"><b>Conexão</b>: rosto, rotina, histórias reais</span><button class="cb ctl" data-a="rm-li">×</button></li>
+    <li><span class="ed"><b>Prova social</b>: viagens e clientes satisfeitos</span><button class="cb ctl" data-a="rm-li">×</button></li>
+    <li><span class="ed"><b>Autoridade</b>: conhecimento de destino e planejamento</span><button class="cb ctl" data-a="rm-li">×</button></li>
+    <li><span class="ed"><b>Reuso</b>: os mesmos vídeos entram no tráfego pago</span><button class="cb ctl" data-a="rm-li">×</button></li>
+  </ul><div class="ctl"><button data-a="add-li">+ Item</button></div></div>
+</div>
+
+<footer class="ed">Branding Connect · Planejamento Dez/Jan</footer>
+</div></div>
+<script id="main">
+(function(){
+var K='bc-plano-dez-v1',app=document.getElementById('app'),edit=false,init=app.innerHTML;
+var X='<button class="cb ctl" data-a="rm-li">×</button>';
+function setEdit(on){edit=on;document.body.classList.toggle('edit',on);
+  app.querySelectorAll('.ed').forEach(function(e){if(on)e.setAttribute('contenteditable','true');else e.removeAttribute('contenteditable');});
+  document.getElementById('edit').textContent=on?'✓ Concluir edição':'✏️ Editar';
+  document.getElementById('hint').textContent=on?'Modo edição: clique em qualquer texto para alterar. Use os botões para adicionar ou remover.':'Clique em Editar para alterar qualquer texto, cor ou item.';}
+function save(){try{
+  var cl=app.cloneNode(true),o=app.querySelectorAll('input[type=checkbox]'),c=cl.querySelectorAll('input[type=checkbox]');
+  for(var i=0;i<c.length;i++){if(o[i].checked)c[i].setAttribute('checked','');else c[i].removeAttribute('checked');}
+  cl.querySelectorAll('[contenteditable]').forEach(function(e){e.removeAttribute('contenteditable')});
+  localStorage.setItem(K,cl.innerHTML);}catch(e){}}
+function load(){try{var s=localStorage.getItem(K);if(s)app.innerHTML=s;}catch(e){}}
+function sel(id){app.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('on',t.dataset.p===id)});
+  app.querySelectorAll('.pane').forEach(function(p){p.classList.toggle('on',p.id===id)});}
+function cyc(el){var o=['n','c','o',''],i=o.indexOf(el.dataset.col||''),n=o[(i+1)%4];if(n)el.dataset.col=n;else delete el.dataset.col;}
+function card(){return '<div class="card"><span class="pill ed" data-col="n">Etiqueta</span><b class="ed">Novo card</b><ul><li><span class="ed">Novo item</span>'+X+'</li></ul><div class="ctl"><button data-a="add-li">+ Item</button><button data-a="col-pill">Cor</button><button data-a="rm-card">Remover card</button></div></div>';}
+function act(b){var a=b.dataset.a,t;
+  if(a==='add-kpi')document.getElementById('kpis').insertAdjacentHTML('beforeend','<div class="card"><h3 class="ed">Título</h3><div class="big ed">Novo destaque</div><span class="ctl"><button data-a="col">Cor</button><button data-a="rm-kpi">Remover</button></span></div>');
+  else if(a==='rm-kpi')b.closest('.card').remove();
+  else if(a==='add-seg')document.getElementById('bar').insertAdjacentHTML('beforeend','<div class="seg" style="flex:15"><span class="ed">Nova etapa</span><span class="ctl"><button data-a="seg-">−</button><button data-a="seg+">+</button><button data-a="col">Cor</button><button data-a="rm-seg">×</button></span></div>');
+  else if(a==='rm-seg'){if(document.getElementById('bar').children.length>1)b.closest('.seg').remove();}
+  else if(a==='seg+'||a==='seg-'){t=b.closest('.seg');var n=(parseInt(t.style.flex)||10)+(a==='seg+'?3:-3);t.style.flex=Math.max(3,n);}
+  else if(a==='col')cyc(b.closest('.card,.seg'));
+  else if(a==='col-pill')cyc(b.closest('.card').querySelector('.pill'));
+  else if(a==='add-week'){var id='p'+Date.now();
+    document.getElementById('tabctl').insertAdjacentHTML('beforebegin','<div class="tab" data-p="'+id+'"><span class="ed">Nova semana</span></div>');
+    document.getElementById('panes').insertAdjacentHTML('beforeend','<div class="pane" id="'+id+'"><div class="wk">'+card()+'</div><div class="ctl"><button data-a="add-card">+ Card nesta semana</button></div></div>');sel(id);}
+  else if(a==='rm-week'){var tabs=app.querySelectorAll('.tab');if(tabs.length>1){var on=app.querySelector('.tab.on');document.getElementById(on.dataset.p).remove();on.remove();sel(app.querySelector('.tab').dataset.p);}}
+  else if(a==='add-card')b.closest('.pane').querySelector('.wk').insertAdjacentHTML('beforeend',card());
+  else if(a==='rm-card')b.closest('.card').remove();
+  else if(a==='add-li'){var ul=b.closest('.card').querySelector('ul');
+    ul.insertAdjacentHTML('beforeend',ul.dataset.k==='chk'?'<li><input type="checkbox"><span class="ed">Novo item</span>'+X+'</li>':'<li><span class="ed">Novo item</span>'+X+'</li>');}
+  else if(a==='rm-li')b.closest('li').remove();
+  else if(a==='add-row')document.querySelector('#tbl tbody').insertAdjacentHTML('beforeend','<tr><td class="ed">Frequência</td><td class="ed">Formato</td><td class="ed">Objetivo</td><td class="ctl"><button class="cb" data-a="rm-row">×</button></td></tr>');
+  else if(a==='rm-row')b.closest('tr').remove();}
+load();
+app.addEventListener('click',function(e){
+  var tab=e.target.closest('.tab');if(tab){sel(tab.dataset.p);save();return;}
+  var b=e.target.closest('[data-a]');if(!b)return;
+  act(b);setEdit(edit);save();});
+app.addEventListener('input',save);
+app.addEventListener('change',save);
+app.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.closest&&e.target.closest('.ed')){e.preventDefault();e.target.blur();}});
+app.addEventListener('paste',function(e){if(e.target.closest&&e.target.closest('.ed')){e.preventDefault();var t=((e.clipboardData||window.clipboardData).getData('text/plain')||'').replace(/\s*\n+\s*/g,' ');document.execCommand('insertText',false,t);}});
+document.getElementById('edit').addEventListener('click',function(){setEdit(!edit);});
+var rb=document.getElementById('reset'),tm;
+rb.addEventListener('click',function(){
+  if(rb.dataset.c){try{localStorage.removeItem(K);}catch(e){}app.innerHTML=init;setEdit(edit);rb.textContent='Restaurar original';delete rb.dataset.c;clearTimeout(tm);}
+  else{rb.dataset.c='1';rb.textContent='Clique de novo para confirmar';tm=setTimeout(function(){rb.textContent='Restaurar original';delete rb.dataset.c;},4000);}});
+setEdit(false);
+var dl=document.getElementById('dl');
+if(dl&&window.claude&&claude.use){claude.use('downloads').then(function(d){
+  if(!d)return;dl.hidden=false;
+  dl.addEventListener('click',function(){
+    var o=app.querySelectorAll('input[type=checkbox]');
+    var root=document.documentElement.cloneNode(true),a=root.querySelector('#app');
+    var cb=a.querySelectorAll('input[type=checkbox]');
+    for(var i=0;i<cb.length;i++){if(o[i].checked)cb[i].setAttribute('checked','');else cb[i].removeAttribute('checked');}
+    a.querySelectorAll('[contenteditable]').forEach(function(e){e.removeAttribute('contenteditable')});
+    root.querySelectorAll('script').forEach(function(x){if(x.id!=='main')x.remove();});
+    var b=root.querySelector('body');b.className='';
+    var bt=root.querySelector('#dl');if(bt)bt.remove();
+    root.querySelector('#edit').textContent='✏️ Editar';
+    root.querySelector('#hint').textContent='Clique em Editar para alterar qualquer texto, cor ou item.';
+    d.save({filename:'index.html',data:'<!DOCTYPE html>\n'+root.outerHTML}).catch(function(){});
+  });
+}).catch(function(){});}
+})();
+</script>
+</body>
+</html>
